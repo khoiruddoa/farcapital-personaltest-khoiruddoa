@@ -13,7 +13,7 @@
 <body>
     <div>
 
-        <h1>ini index</h1>
+        <h1>dashboard admin</h1>
 
         <table class="table">
             <thead>
@@ -24,7 +24,7 @@
                     <th scope="col">tanggal lahir</th>
                     <th scope="col">alamat</th>
                     <th scope="col">umur</th>
-                    <th scope="col">detail</th>
+                    <th scope="col">kriteria</th>
 
 
                     <th></th>
@@ -33,7 +33,7 @@
             <tbody>
                 @foreach ($donors as $donor)
                     <tr>
-                        <td> 1</td>
+                        <td> {{ $loop->iteration }}</td>
                         <td>{{ $donor->name }}</td>
                         <td>{{ $donor->jenis_kelamin }}</td>
                         <td>{{ $donor->tanggal_lahir }}</td>
@@ -46,11 +46,11 @@
                         <td>{{ $age }}</td>
 
                         @if ($age >= 17)
-                            <td><a href="/users/donors/continue/create"> anda bisa menjadi pendonor</a></td>
+                            <td><a href="{{ route('detailadmin', ['donor' => $donor]) }}">memenuhi kriteria umur. cek
+                                    detail</a></td>
                         @else
-                            <td>anda tidak bisa jadi pendonor</td>
+                            <td>kriteria umur belum terpenuhi</td>
                         @endif
-                        <td><a href="{{ route('detailadmin', ['donor' => $donor]) }}">detail</a></td>
 
                     </tr>
                 @endforeach

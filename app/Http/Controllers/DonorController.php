@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
+
 use Carbon\Carbon;
 use App\Models\Donor;
 use Illuminate\Contracts\Support\ValidatedData;
@@ -11,8 +13,12 @@ class DonorController extends Controller
 {
     public function index()
     {
+        $donor = DB::table('donors')->where('user_id', auth()->user()->id)
+            ->orderBy('id', 'desc')
+            ->first();
+
         return view('users.donors.index', [
-            'donors' => Donor::firstWhere('user_id', auth()->user()->id)->get()
+            'donor' => $donor
         ]);
     }
 
@@ -33,7 +39,19 @@ class DonorController extends Controller
 
 
         ]);
+
+        $now = Carbon::now();
+        $b_day = Carbon::parse($request->tanggal_lahir); // Tanggal Lahir
+        $age = $b_day->diffInYears($now);
+        if ($age >= 17 && $age <= 60) {
+            $decision = true;
+        } else {
+            $decision = false;
+        }
+
         $validatedData['user_id'] = auth()->user()->id;
+        $validatedData['status'] = $decision;
+
         Donor::create($validatedData);
         return redirect('/users/donors/')->with('success', 'daftar donor berhasil');
     }

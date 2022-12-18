@@ -9,7 +9,11 @@
 </head>
 
 <body>
-    tetstststst
+    @if ($donorContinue->status_donor == true)
+        <h1>selamat anda memenuhi kriteria untuk donor darah. silahkan hadir ke kantor pmi terdekat</h1>
+    @else
+        <h1>anda belum memnuhi kriteria </h1>
+    @endif
 </body>
 
 </html>

@@ -16,10 +16,11 @@ class CreateDonorsTable extends Migration
         Schema::create('donors', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->string('name');
-            $table->string('jenis_kelamin');
+            $table->string('name', 50);
+            $table->string('jenis_kelamin', 10);
             $table->date('tanggal_lahir');
             $table->text('alamat');
+            $table->boolean('status');
             $table->timestamps();
         });
     }

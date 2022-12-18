@@ -12,27 +12,25 @@
 </head>
 
 <body>
-    <h1>donors register</h1>
+    <h1>silahkan isi form dibawah ini. untuk melanjutkan pemeriksaan</h1>
     <div class="col-md-4">
-
-
-
         <form action="/users/donors/continue/store" method="post">
             @csrf
+            <input type="hidden" name="donor_id" value="{{ $id }}">
 
             <label for="exampleInputEmail1" class="form-label">apakah pernah menderita hepatitis b?</label>
 
             <select class="form-select" aria-label="Default select example" name="hepatitis">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
             <label for="exampleInputEmail1" class="form-label">apakah kontak dengan penderita hepatitis b?</label>
 
             <select class="form-select" aria-label="Default select example" name="kontak">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
 
@@ -40,38 +38,38 @@
 
             <select class="form-select" aria-label="Default select example" name="transfusi">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
             <label for="exampleInputEmail1" class="form-label">apakah tato dalam jangka waktu 6 bulan?</label>
 
             <select class="form-select" aria-label="Default select example" name="tato">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">apakah gigi dalam jangka waktu 72 jam?</label>
 
             <select class="form-select" aria-label="Default select example" name="gigi">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
             <label for="exampleInputEmail1" class="form-label">apakah operasi dalam jangka waktu 6 bulan?</label>
 
             <select class="form-select" aria-label="Default select example" name="operasi">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">apakah vaksinasi dalam jangka waktu 24 jam?</label>
 
             <select class="form-select" aria-label="Default select example" name="vaksin">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">apakah vaksin parotis dalam jangka waktu 2
@@ -79,8 +77,8 @@
 
             <select class="form-select" aria-label="Default select example" name="parotis">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">apakah imunisasi rabies dalam jangka waktu 1
@@ -88,24 +86,24 @@
 
             <select class="form-select" aria-label="Default select example" name="rabies">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">apakah alergi 1 minggu ini?</label>
 
             <select class="form-select" aria-label="Default select example" name="alergi">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">apakah transplantasi kulit?</label>
 
             <select class="form-select" aria-label="Default select example" name="kulit">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">- Sedang hamil dan dalam jangka waktu 6
@@ -113,54 +111,54 @@
 
             <select class="form-select" aria-label="Default select example" name="hamil">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
             <label for="exampleInputEmail1" class="form-label">- Sedang menyusui</label>
 
             <select class="form-select" aria-label="Default select example" name="susui">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">Ketergantungan obat</label>
 
             <select class="form-select" aria-label="Default select example" name="obat">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">- Alkoholisme akut dan kronis</label>
 
             <select class="form-select" aria-label="Default select example" name="alkohol">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">sifilis?</label>
 
             <select class="form-select" aria-label="Default select example" name="sifilis">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">- Menderita Tuberkulosis secara klinis</label>
 
             <select class="form-select" aria-label="Default select example" name="tuberkulosis">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
             <label for="exampleInputEmail1" class="form-label">- Menderita epilepsi dan sering kejang</label>
 
             <select class="form-select" aria-label="Default select example" name="epilepsi">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
 
@@ -170,8 +168,8 @@
 
             <select class="form-select" aria-label="Default select example" name="vena">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">-- Mempunyai kecenderungan perdarahan
@@ -179,8 +177,8 @@
 
             <select class="form-select" aria-label="Default select example" name="thalasemia">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
             <label for="exampleInputEmail1" class="form-label">- Seseorang yang termasuk kelompok
                 masyarakat yang berisiko tinggi
@@ -190,8 +188,8 @@
 
             <select class="form-select" aria-label="Default select example" name="hiv">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <label for="exampleInputEmail1" class="form-label">- Pengidap HIV dan AIDS menurut hasil
@@ -199,16 +197,16 @@
 
             <select class="form-select" aria-label="Default select example" name="aids">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
             <label for="exampleInputEmail1" class="form-label">- Syarat donor darah untuk perempuan,
                 sebaiknya sedang tidak dalam masa haid</label>
 
             <select class="form-select" aria-label="Default select example" name="haid">
 
-                <option value="true">ya</option>
-                <option value="fals">tidak</option>
+                <option value="1">ya</option>
+                <option value="0">tidak</option>
             </select>
 
             <button type="submit" class="btn btn-primary">Submit</button>

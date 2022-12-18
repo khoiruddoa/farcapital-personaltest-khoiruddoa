@@ -15,6 +15,7 @@ class CreateDonorContinuesTable extends Migration
     {
         Schema::create('donor_continues', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('donor_id');
             $table->boolean('hepatitis');
             $table->boolean('kontak');
             $table->boolean('transfusi');
@@ -38,6 +39,7 @@ class CreateDonorContinuesTable extends Migration
             $table->boolean('hiv');
             $table->boolean('aids');
             $table->boolean('haid');
+            $table->boolean('status_donor');
             $table->timestamps();
         });
     }
