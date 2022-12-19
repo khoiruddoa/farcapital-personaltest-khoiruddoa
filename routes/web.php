@@ -29,7 +29,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->middlewa
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('authenticate');
 Route::get('/register', [RegisterController::class, 'index'])->name('register')->middleware('guest');
-Route::post('/register', [RegisterController::class, 'store'])->name('postRegister');
+Route::post('/register', [RegisterController::class, 'store'])->name('storeRegister');
 
 
 Route::get('/users/donors', [DonorController::class, 'index'])->name('usersDonors')->middleware('auth');

@@ -12,9 +12,9 @@
 
 <body>
     <div>
-        <a class="btn btn-primary" href="/login" role="button">Login</a>
-        <a class="btn btn-primary" href="/logout" role="button">Logout</a>
-        <a class="btn btn-primary" href="/register" role="button">Register</a>
+        <a class="btn btn-primary" href="{{ route('login') }}" role="button">Login</a>
+        <a class="btn btn-primary" href="{{ route('logout') }}" role="button">Logout</a>
+        <a class="btn btn-primary" href="{{ route('register') }}" role="button">Register</a>
         <h1>ini home</h1>
 
 

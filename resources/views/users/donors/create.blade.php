@@ -17,7 +17,7 @@
 
 
 
-        <form action="/users/donors/store" method="post">
+        <form action="{{ route('usersDonorsStore') }}" method="post">
             @csrf
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">name</label>

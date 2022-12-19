@@ -13,17 +13,17 @@
 <body>
     <div>
         <h1>ini dashboard</h1>
-        <a class="btn btn-primary" href="/users/donors/create" role="button">Daftar Donor</a>
+        <a class="btn btn-primary" href="{{ route('usersDonorsCreate') }}" role="button">Daftar Donor</a>
 
         @if (session()->has('msg'))
-        <div class="alert alert-danger alert-dismissible fade show col-lg-8" role="alert">
-            {{ session('msg') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    @endif
+            <div class="alert alert-danger alert-dismissible fade show col-lg-8" role="alert">
+                {{ session('msg') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
 
         <h1>ini untuk dashboard admin</h1>
-        <a class="btn btn-primary" href="/dashboard" role="button">masuk ke dashboard admin</a>
+        <a class="btn btn-primary" href="{{ route('dashboard') }}" role="button">masuk ke dashboard admin</a>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
